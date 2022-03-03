@@ -56,33 +56,7 @@ btnPlay.addEventListener("click", function(){
     } 
 })*/
 
-/*const arrNomi = ['Henri', 'Francesco', 'Giovanni', 'Marco', 'Carla'];
-const arrCognomi = ['Kapidani', 'Totti', 'Rossi', 'Bianchi', 'Verdi', 'Gialli', 'Violetti'];
 
-const arrNomiIndexes = [];
-const arrCognomiIndexes = [];
-
-for (let i = 0; i < 3; i++) {
-	let indexRandomNome = Math.floor(Math.random() * arrNomi.length);
-	while (arrNomiIndexes.includes(indexRandomNome)) {
-		indexRandomNome = Math.floor(Math.random() * arrNomi.length);
-	}
-	arrNomiIndexes.push(indexRandomNome);
-	const nome = arrNomi[indexRandomNome];
-
-	let indexRandomCognome = Math.floor(Math.random() * arrCognomi.length);
-	while (arrCognomiIndexes.includes(indexRandomCognome)) {
-		indexRandomCognome = Math.floor(Math.random() * arrCognomi.length);
-	}
-	arrCognomiIndexes.push(indexRandomCognome);
-	const cognome = arrCognomi[indexRandomCognome];
-
-	const nomeFinale = nome + ' ' + cognome;
-	console.log(nomeFinale);
-}
-
-console.log(arrNomiIndexes);
-console.log(arrCognomiIndexes);*/
 
 
 /*Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
@@ -92,17 +66,20 @@ const arrBomb100 = [];
 
 for (let i = 0; i < 16; i++) {
     
-    // create 16 random number
-    const bombs100 = Math.floor(Math.random() * 100) +1;
+    // creo un num rnd tra 1 e 100
+    let bombs100 = Math.floor(Math.random() * 100) +1;
 
-    // controllo che non ci sia già questo numero nell'array
-    if(arrBomb100.includes(arrBomb100[i]) == false){
-        // ad ogni iterazione pusho il num rnd nell'arr
-        arrBomb100.push(bombs100);
+    // controllo se il num rnd c'è già nell'array
+    while (arrBomb100.includes(bombs100) == true) {     //se c'è già
+        bombs100 = Math.floor(Math.random() * 100) +1;  //ne genero uno nuovo
     }
 
+    // aggiungo il num rnd nell'array
+    arrBomb100.push(bombs100);
 }
 console.log(arrBomb100);
+
+
 
 
 
@@ -110,15 +87,16 @@ const arrBomb81 = [];
 
 for (let i = 0; i < 16; i++) {
     
-    // create 16 random number
-    const bombs81 = Math.floor(Math.random() * 81) +1;
+    // creo un num rnd tra 1 e 81
+    let bombs81 = Math.floor(Math.random() * 81) +1;
 
-    // controllo che non ci sia già questo numero nell'array
-    if(arrBomb81.includes(arrBomb81[i]) == false){
-        // ad ogni iterazione pusho il num rnd nell'arr
-        arrBomb81.push(bombs81);
+    // controllo se il num rnd c'è già nell'array
+    while (arrBomb81.includes(bombs81) == true) {     //se c'è già
+        bombs81 = Math.floor(Math.random() * 81) +1;  //ne genero uno nuovo
     }
 
+    // aggiungo il num rnd nell'array
+    arrBomb81.push(bombs81);
 }
 console.log(arrBomb81);
 
@@ -130,14 +108,21 @@ const arrBomb49 = [];
 
 for (let i = 0; i < 16; i++) {
     
-    // create 16 random number
-    const bombs49 = Math.floor(Math.random() * 49) +1;
+    // creo un num rnd tra 1 e 49
+    let bombs49 = Math.floor(Math.random() * 49) +1;
 
-    // controllo che non ci sia già questo numero nell'array
-    if(arrBomb49.includes(arrBomb49[i]) == false){
-        // ad ogni iterazione pusho il num rnd nell'arr
-        arrBomb49.push(bombs49);
+    // controllo se il num rnd c'è già nell'array
+    while (arrBomb49.includes(bombs49) == true) {     //se c'è già
+        bombs49 = Math.floor(Math.random() * 49) +1;  //ne genero uno nuovo
     }
 
+    // aggiungo il num rnd nell'array
+    arrBomb49.push(bombs49);
 }
 console.log(arrBomb49);
+
+
+
+
+
+// In seguito l'utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina
