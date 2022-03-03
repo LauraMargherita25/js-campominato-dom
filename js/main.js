@@ -86,11 +86,22 @@ function startGame() {
 
         for (let i = 1; i <= 100; i++) {
     
-            const tile = document.createElement("div");
-            tile.classList.add("tile");
-            tile.innerHTML = i;
-            eleGrid.append(tile);
+            const eleTile = document.createElement("div");
+            eleTile.classList.add("tile");
+            eleTile.innerHTML = i;
+            eleTile.addEventListener("click", changeCellColor);
+            eleGrid.append(eleTile);
+
+            // function che colora la tile al click
+            function changeCellColor(event) {
+    
+            if (eleTile.innerHTML = bombs100){
+    
+                this.classList.add('selected');
+            }
         }
+
+}
 
     } else if (userlevel == "1"){
         
@@ -99,10 +110,10 @@ function startGame() {
         
         for (let i = 1; i <= 81; i++) {
     
-            const tile = document.createElement("div");
-            tile.classList.add("tile");
-            tile.innerHTML = i;
-            eleGrid.append(tile);
+            const eleTile = document.createElement("div");
+            eleTile.classList.add("tile");
+            eleTile.innerHTML = i;
+            eleGrid.append(eleTile);
         }
         
     } else if (userlevel == "2"){
@@ -115,7 +126,6 @@ function startGame() {
             const eleTile = document.createElement("div");
             eleTile.classList.add("tile");
             eleTile.innerHTML = i;
-            eleTile.addEventListener("click", changeCellColor)
             eleGrid.append(eleTile);
         }
 
@@ -125,7 +135,11 @@ function startGame() {
 
 // function che colora la tile al click
 function changeCellColor(event) {
-    this.classList.add('selected');
+
+    if (eleTile.innerHTML = arrBomb100[i]){
+
+        this.classList.add('selected');
+    }
 }
 
 
@@ -134,11 +148,11 @@ function changeCellColor(event) {
 I numeri nella lista delle bombe non possono essere duplicati.*/
 
 const arrBomb100 = [];
+// creo un num rnd tra 1 e 100
+let bombs100 = Math.floor(Math.random() * 100) +1;
 
 for (let i = 0; i < 16; i++) {
     
-    // creo un num rnd tra 1 e 100
-    let bombs100 = Math.floor(Math.random() * 100) +1;
 
     // controllo se il num rnd c'è già nell'array
     while (arrBomb100.includes(bombs100) == true) {     //se c'è già
@@ -169,7 +183,7 @@ for (let i = 0; i < 16; i++) {
     // aggiungo il num rnd nell'array
     arrBomb81.push(bombs81);
 }
-// console.log(arrBomb81);
+console.log(arrBomb81);
 
 
 
