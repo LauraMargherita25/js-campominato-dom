@@ -85,30 +85,19 @@ console.log(arrNomiIndexes);
 console.log(arrCognomiIndexes);*/
 
 
-/*btnOpenMenu.addEventListener("click", function(){
-    hiddenMenu.classList.add("active");
-//     hiddenMenu.style.display = "block";
-})*/
-
-// let computerNumber = Math.floor(Math.random() * 6) +1;
-
-// if( userNumber > computerNumber){
-//     console.log("Hai vinto!");
-
-// }else if ( userNumber < computerNumber){
-//     console.log("Hai perso!");
-// }
-
 /*Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
 I numeri nella lista delle bombe non possono essere duplicati.*/
 
-
-
+const arrBomb100 = [];
 
 for (let i = 0; i < 16; i++) {
     
     // create 16 random number
     const bombs100 = Math.floor(Math.random() * 100) +1;
-    console.log(bombs100);
+
+    // ad ogni iterazione pusho il num rnd nell'arr
+    arrBomb100.push(bombs100);
+    console.log(arrBomb100);
+
 
 }
