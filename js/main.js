@@ -57,6 +57,77 @@ btnPlay.addEventListener("click", function(){
 })*/
 
 
+/*
+Consegna
+L'utente indica un livello di difficoltà in base al quale viene generata una griglia di gioco quadrata, in cui ogni cella contiene un numero (in ordine) tra quelli compresi in un range:
+con difficoltà 1 => tra 1 e 100
+con difficoltà 2 => tra 1 e 81
+con difficoltà 3 => tra 1 e 49
+*/
+
+const eleLevel = document.getElementById('select_level');
+const btnPlay = document.getElementById('play');
+const eleGrid = document.querySelector('.grid');
+//const arrLevels = [100, 81, 49];
+
+btnPlay.addEventListener('click', startGame);
+
+
+function startGame() {
+    eleGrid.innerHTML = ''; // cancella il contenuto della griglia per evitare che le celle vengano aggiunte alle precenti ad ogni click del bottone gioca
+    eleGrid.classList.remove("low", "midium", "high");// per non avere altre classi oltre a grid ad ogni nuova iterazione
+
+    let userlevel = eleLevel.value;
+
+    if (userlevel == "0") {
+
+        eleGrid.classList.add("low")
+        eleGrid.style.visibility = "visible";
+
+        for (let i = 1; i <= 100; i++) {
+    
+            const tile = document.createElement("div");
+            tile.classList.add("tile");
+            tile.innerHTML = i;
+            eleGrid.append(tile);
+        }
+
+    } else if (userlevel == "1"){
+        
+        eleGrid.classList.add("midium")
+        eleGrid.style.visibility = "visible";
+        
+        for (let i = 1; i <= 81; i++) {
+    
+            const tile = document.createElement("div");
+            tile.classList.add("tile");
+            tile.innerHTML = i;
+            eleGrid.append(tile);
+        }
+        
+    } else if (userlevel == "2"){
+
+        eleGrid.classList.add("high")
+        eleGrid.style.visibility = "visible";
+
+        for (let i = 1; i <= 49; i++) {
+    
+            const eleTile = document.createElement("div");
+            eleTile.classList.add("tile");
+            eleTile.innerHTML = i;
+            eleTile.addEventListener("click", changeCellColor)
+            eleGrid.append(eleTile);
+        }
+
+    } 
+}
+
+
+// function che colora la tile al click
+function changeCellColor(event) {
+    this.classList.add('selected');
+}
+
 
 
 /*Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
@@ -77,7 +148,7 @@ for (let i = 0; i < 16; i++) {
     // aggiungo il num rnd nell'array
     arrBomb100.push(bombs100);
 }
-console.log(arrBomb100);
+// console.log(arrBomb100);
 
 
 
@@ -98,7 +169,7 @@ for (let i = 0; i < 16; i++) {
     // aggiungo il num rnd nell'array
     arrBomb81.push(bombs81);
 }
-console.log(arrBomb81);
+// console.log(arrBomb81);
 
 
 
@@ -119,7 +190,7 @@ for (let i = 0; i < 16; i++) {
     // aggiungo il num rnd nell'array
     arrBomb49.push(bombs49);
 }
-console.log(arrBomb49);
+//console.log(arrBomb49);
 
 
 
