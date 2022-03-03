@@ -95,9 +95,12 @@ for (let i = 0; i < 16; i++) {
     // create 16 random number
     const bombs100 = Math.floor(Math.random() * 100) +1;
 
-    // ad ogni iterazione pusho il num rnd nell'arr
-    arrBomb100.push(bombs100);
-    console.log(arrBomb100);
+    // controllo che non ci sia già questo numero nell'array
+    if(arrBomb100.includes[i] == false){
+        // ad ogni iterazione pusho il num rnd nell'arr
+        arrBomb100.push(bombs100);
+    }
 
 
 }
+console.log(arrBomb100);
