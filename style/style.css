@@ -1,0 +1,85 @@
+/* General rules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.main_container{
+    height: 100vh;
+}
+
+.container{
+    width: 1000px;
+    height: 5rem;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/* header */
+.header_left, .header_right{
+    display: flex;
+    align-items: center;
+}
+
+.header_left img{
+    width: 80px;
+}
+
+
+
+
+
+/* main */
+main{
+    height: calc(100vh - 10rem);
+
+    background-color: aquamarine;
+
+    display: flex;
+}
+
+.grid{
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    visibility: hidden;
+}
+
+.low{
+    width: calc(50px * 6);
+    height: calc(50px * 6);
+}
+
+.midium{
+    width: calc(50px * 8);
+    height: calc(50px * 8);
+}
+
+.high{
+    width: calc(50px * 10);
+    height: calc(50px * 10);
+}
+
+.square{
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
