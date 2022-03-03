@@ -96,11 +96,48 @@ for (let i = 0; i < 16; i++) {
     const bombs100 = Math.floor(Math.random() * 100) +1;
 
     // controllo che non ci sia già questo numero nell'array
-    if(arrBomb100.includes[i] == false){
+    if(arrBomb100.includes(arrBomb100[i]) == false){
         // ad ogni iterazione pusho il num rnd nell'arr
         arrBomb100.push(bombs100);
     }
 
-
 }
 console.log(arrBomb100);
+
+
+
+const arrBomb81 = [];
+
+for (let i = 0; i < 16; i++) {
+    
+    // create 16 random number
+    const bombs81 = Math.floor(Math.random() * 81) +1;
+
+    // controllo che non ci sia già questo numero nell'array
+    if(arrBomb81.includes(arrBomb81[i]) == false){
+        // ad ogni iterazione pusho il num rnd nell'arr
+        arrBomb81.push(bombs81);
+    }
+
+}
+console.log(arrBomb81);
+
+
+
+
+
+const arrBomb49 = [];
+
+for (let i = 0; i < 16; i++) {
+    
+    // create 16 random number
+    const bombs49 = Math.floor(Math.random() * 49) +1;
+
+    // controllo che non ci sia già questo numero nell'array
+    if(arrBomb49.includes(arrBomb49[i]) == false){
+        // ad ogni iterazione pusho il num rnd nell'arr
+        arrBomb49.push(bombs49);
+    }
+
+}
+console.log(arrBomb49);
